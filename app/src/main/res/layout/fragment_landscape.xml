@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wearable.whatsfordinner.LandscapeFragment"
+    android:orientation="horizontal">
+
+    <ListView
+        android:id="@+id/recipesList"
+        android:layout_width="200dp"
+        android:layout_height="fill_parent">
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="right">
+
+        <TextView
+            android:id="@+id/recipeName"
+            android:text="text recipe name displaying"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:src="@drawable/burger"
+                android:id="@+id/recipe_pic"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+
+            <TextView
+                android:text = "Ingredients: "
+                android:id="@+id/ingredient_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:text = "Directions:"
+            android:id="@+id/recipe_direction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

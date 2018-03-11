@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">What’s for Dinner</string>
+    <string name="recipe_name">Enter Recipe Name</string>
+
+    <string name="Ingredient1">Ingredient 1</string>
+    <string name="Ingredient2">Ingredient 2</string>
+    <string name="Ingredient3">Ingredient 3</string>
+    <string name="Ingredient4">Ingredient 4</string>
+    <string name="Ingredient5">Ingredient 5</string>
+    <string name="Ingredient6">Ingredient 6</string>
+    <string name="Ingredient7">Ingredient 7</string>
+    <string name="Ingredient8">Ingredient 8</string>
+    <string name="Ingredient9">Ingredient 9</string>
+    <string name="Ingredient10">Ingredient 10</string>
+
+    <string name="recipe_detail">Please describe how to prepare the recipe with maximum 250 characters. </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

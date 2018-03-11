@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/recipe_name"
+        style="@android:style/Widget.DeviceDefault.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="#e6f3f7"
+        android:inputType="textMultiLine|textCapWords|textAutoComplete"
+        android:hint="@string/recipe_name" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="#eef7fa">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="2">
+
+                <ImageView
+                    android:id="@+id/burger"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/burger" />
+
+                <ImageButton
+                    android:id="@+id/add_newdish_pic"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/newdish_smaller"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="#c5e3ed"
+                android:text="Ingredients"
+                android:inputType="textMultiLine|textCapWords|textAutoComplete"
+                android:textAppearance="@android:style/TextAppearance.Widget.PopupMenu.Large" />
+
+            <AutoCompleteTextView
+                android:id="@+id/ingredient1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapWords|textAutoComplete"
+                android:hint="@string/Ingredient1" />
+
+            <AutoCompleteTextView
+                android:id="@+id/ingredient2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapCharacters"
+                android:hint="@string/Ingredient2"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/ingredient3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapWords|textAutoComplete"
+                android:hint="@string/Ingredient3"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/ingredient4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapWords|textAutoComplete"
+                android:hint="@string/Ingredient4"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/ingredient5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapWords|textAutoComplete"
+                android:hint="@string/Ingredient5"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/ingredient6"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapWords|textAutoComplete"
+                android:hint="@string/Ingredient6"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/ingredient7"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapWords|textAutoComplete"
+                android:hint="@string/Ingredient7"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/ingredient8"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapWords|textAutoComplete"
+                android:hint="@string/Ingredient8"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/ingredient9"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapWords|textAutoComplete"
+                android:hint="@string/Ingredient9"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/ingredient10"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapWords|textAutoComplete"
+                android:hint="@string/Ingredient10"/>
+
+            <EditText
+                android:id="@+id/recipe_detail"
+                android:layout_width="fill_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#deeff5"
+                android:inputType="textMultiLine|textCapWords|textAutoComplete"
+                android:hint="@string/recipe_detail"/>
+
+            <Button
+                android:id="@+id/save_dish_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:text="SAVE"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+
+
+

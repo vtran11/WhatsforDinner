@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/mealPlanner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#e5f8ff"
+                    android:gravity="center"
+                    android:text="****"
+                    android:textAppearance="@android:style/TextAppearance.Widget.PopupMenu.Large" />
+
+                <TextView
+                    android:id="@+id/mealPlanner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#e5f8ff"
+                    android:gravity="center"
+                    android:text="Weekly "
+                    android:textAppearance="@android:style/TextAppearance.Widget.PopupMenu.Large" />
+
+                <TextView
+                    android:id="@+id/mealPlanner3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#e5f8ff"
+                    android:gravity="center"
+                    android:text="Planner"
+                    android:textAppearance="@android:style/TextAppearance.Widget.PopupMenu.Large" />
+
+                <TextView
+                    android:id="@+id/mealPlanner4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#e5f8ff"
+                    android:gravity="center"
+                    android:text="****"
+                    android:textAppearance="@android:style/TextAppearance.Widget.PopupMenu.Large" />
+
+            </TableRow>
+
+            <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="#c5e3ed"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Day"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <TextView
+                    android:id="@+id/breakfast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Breakfast"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <TextView
+                    android:id="@+id/lunch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Lunch"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <TextView
+                    android:id="@+id/dinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Dinner"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+            </TableRow>
+
+
+
+            <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="355dp"
+                android:layout_gravity="center_vertical"
+                android:background="#cde7f0"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/monday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:hint="Monday"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <Spinner
+                    android:id="@+id/breakfast1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:hint="Breakfast"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <Spinner
+                    android:id="@+id/lunch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:hint="Lunch"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <Spinner
+                    android:id="@+id/dinner1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Dinner"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+            </TableRow>
+
+            <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="#d6ebf2"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tuesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Tuesday"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <Spinner
+                    android:id="@+id/breakfast2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Breakfast"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <Spinner
+                    android:id="@+id/lunch2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Lunch"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <Spinner
+                    android:id="@+id/dinner2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Dinner"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+            </TableRow>
+
+            <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="#deeff5"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/wednesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Wednesday"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <Spinner
+                    android:id="@+id/breakfast3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Breakfast"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <Spinner
+                    android:id="@+id/lunch3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Lunch"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <Spinner
+                    android:id="@+id/dinner3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Dinner"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+            </TableRow>
+
+
+            <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="#e6f3f7"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/thursday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Thursday"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <Spinner
+                    android:id="@+id/breakfast4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Breakfast"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <Spinner
+                    android:id="@+id/lunch4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Lunch"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <Spinner
+                    android:id="@+id/dinner4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Dinner"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+            </TableRow>
+
+
+            <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="#eef7fa"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/friday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Friday"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <Spinner
+                    android:id="@+id/breakfast5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Breakfast"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <Spinner
+                    android:id="@+id/lunch5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Lunch"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <Spinner
+                    android:id="@+id/dinner5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Dinner"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+            </TableRow>
+
+
+
+            <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="#f6fbfc"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/saturday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Saturday"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <Spinner
+                    android:id="@+id/breakfast6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Breakfast"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <Spinner
+                    android:id="@+id/lunch6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Lunch"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <Spinner
+                    android:id="@+id/dinner6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Dinner"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+            </TableRow>
+
+
+
+            <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="#ffffff"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/sunday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Sunday"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <Spinner
+                    android:id="@+id/breakfast7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Breakfast"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <Spinner
+                    android:id="@+id/lunch7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Lunch"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <Spinner
+                    android:id="@+id/dinner7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Dinner"
+                    android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
