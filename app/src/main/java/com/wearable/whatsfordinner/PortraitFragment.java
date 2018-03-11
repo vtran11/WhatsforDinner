@@ -7,11 +7,32 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Map;
 
 
 public class PortraitFragment extends Fragment {
+    ListView recipesListView;
+    ArrayList<String> recipes_list = new ArrayList<>();
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_portrait, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
+        View portraitView = inflater.inflate(R.layout.fragment_portrait, container, false);
+
+        for (Map.Entry<String, CompletedRecipe> entry: Recipes.allRecipes.entrySet())
+        {
+            recipes_list.add(entry.getKey());
+        }
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, recipes_list);
+        recipesListView = (ListView) portraitView.findViewById(R.id.recipesList);
+        recipesListView.setAdapter(adapter);
+        return portraitView;
     }
 }

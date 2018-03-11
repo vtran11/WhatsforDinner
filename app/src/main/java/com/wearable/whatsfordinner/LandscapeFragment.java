@@ -12,7 +12,10 @@ import android.view.ViewGroup;
 
 public class LandscapeFragment extends Fragment {
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-                       return inflater.inflate(R.layout.fragment_landscape, container, false);
-            }
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
+        return inflater.inflate(R.layout.fragment_landscape, container, false);
+
+
+    }
 }

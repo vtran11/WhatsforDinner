@@ -5,16 +5,18 @@
     android:layout_height="fill_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <FrameLayout
+        android:name="com.wearable.whatsfordinner.PortraitFragment"
+        android:id="@+id/portraitView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
+    </FrameLayout>
 
-        <FrameLayout
-            android:id="@+id/recipeList_fragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <FrameLayout
+        android:name="com.wearable.whatsfordinner.LandscapeFragment"
+        android:id="@+id/landscapeView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
 
-        </FrameLayout>
-    </LinearLayout>
 </LinearLayout>
