@@ -25,14 +25,16 @@ public class PortraitFragment extends Fragment {
     {
         View portraitView = inflater.inflate(R.layout.fragment_portrait, container, false);
 
-        for (Map.Entry<String, CompletedRecipe> entry: Recipes.allRecipes.entrySet())
-        {
+        //get recipes name from saved Recipes List and put into a list
+        for (Map.Entry<String, CompletedRecipe> entry: Recipes.allRecipes.entrySet()) {
             recipes_list.add(entry.getKey());
         }
 
+        //display the recipes name List on screen
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, recipes_list);
         recipesListView = (ListView) portraitView.findViewById(R.id.recipesList);
         recipesListView.setAdapter(adapter);
+
         return portraitView;
     }
 }
