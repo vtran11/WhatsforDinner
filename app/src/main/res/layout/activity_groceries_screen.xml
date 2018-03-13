@@ -15,11 +15,17 @@
         android:gravity="center"
         android:background="#c5e3ed" />
 
-    <ListView
-        android:id="@+id/IngredientListView"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:background="#eef7fa">
-    </ListView>
+        android:layout_height="fill_parent">
+
+        <ListView
+            android:id="@+id/IngredientListView"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="#eef7fa">
+        </ListView>
+    </ScrollView>
+
 
 </LinearLayout>

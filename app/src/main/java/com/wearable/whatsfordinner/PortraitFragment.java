@@ -7,6 +7,7 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -34,6 +35,16 @@ public class PortraitFragment extends Fragment {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, recipes_list);
         recipesListView = (ListView) portraitView.findViewById(R.id.recipesList);
         recipesListView.setAdapter(adapter);
+
+        //******  Save Recipe Name to allSelectedRecipes when user clicks on any Name  *********
+        recipesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                //Save current selected Recipe Name
+                String selectedRecipe = (String) adapterView.getItemAtPosition(position);
+                Recipes.allSelectedRecipes.add(selectedRecipe);
+            }
+        });
 
         return portraitView;
     }
