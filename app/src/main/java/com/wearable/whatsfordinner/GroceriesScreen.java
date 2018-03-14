@@ -14,6 +14,8 @@ public class GroceriesScreen extends AppCompatActivity {
 
     String recipesname;
     ArrayList<String> ingredients_list = new ArrayList<>();
+    ArrayList<String> recipes = new ArrayList<>();
+
     //Uri image;
     //String directions;
     //CompletedRecipe recipe = new CompletedRecipe(recipesname, image, ingredients_list, directions);
@@ -23,11 +25,25 @@ public class GroceriesScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_groceries_screen);
 
-        //Try to get all ingredients from Recipe Screen
+        //get recipes name from saved Recipes List and put into a list
         for (Map.Entry<String, CompletedRecipe> entry: Recipes.allRecipes.entrySet()) {
-            ingredients_list.add(entry.getKey()); //this is recipe name not ingeredients
-            //ingredients_list.add(Recipes.allRecipes.entrySet().toString()); //TEST
+            recipes.add(entry.getKey());
         }
+
+        //Try to get all ingredients from Recipe Screen
+       /* for (Map.Entry<String, CompletedRecipe> entry: Recipes.allRecipes.entrySet()) {
+            for (String i : entry.getValue().getIngredient())
+            {
+                    ingredients_list.add(i); //work for 1 first ingredient
+            }
+        }*/
+
+       for(String text: recipes) {
+           for (int i = 0; i < Recipes.allRecipes.get(text).getIngredient().size(); i++) {
+               ingredients_list.add(Recipes.allRecipes.get(text).getIngredient().get(i));
+           }
+       }
+
 
         //display the ingredient list on screen
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, ingredients_list);

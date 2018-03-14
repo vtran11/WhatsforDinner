@@ -33,7 +33,6 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:src="@drawable/burger"
                 android:id="@+id/recipe_pic"
                 android:layout_width="100dp"
                 android:layout_height="100dp" />
@@ -44,29 +43,44 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:text = "Ingredients: "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginLeft="20dp"
+                    android:text="Ingredients (Scroll to see more): "
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-                <TextView
-                    android:id="@+id/ingredient_list"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"/>
+                <ScrollView
+                    android:layout_width="250dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="30dp">
+
+                    <TextView
+                        android:id="@+id/ingredient_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"/>
+                </ScrollView>
+
+
+
             </LinearLayout>
         </LinearLayout>
 
         <TextView
-            android:text = "Directions:"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Directions (Scroll to see more):"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-        <TextView
-            android:id="@+id/recipe_direction"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
+        <ScrollView
+            android:layout_width="370dp"
+            android:layout_height="155dp"
+            android:layout_marginLeft="30dp">
+            <TextView
+                android:id="@+id/recipe_direction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </ScrollView>
     </LinearLayout>
 
 </LinearLayout>

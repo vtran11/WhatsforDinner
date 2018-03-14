@@ -22,14 +22,22 @@ public class CompletedRecipe implements Serializable {
     public ArrayList<String> ingeredients_list;
     public String recipeDirection;
 
-    public CompletedRecipe(String recipeName, Uri image, ArrayList<String> ingredients_list, String recipeDirection)
+    public CompletedRecipe(String recipeName, Uri image, ArrayList<String> ingredients, String recipeDirection)
     {
         this.recipeName = recipeName;
         this.image = image;
-        this.ingeredients_list = ingredients_list;
+        this.ingeredients_list = ingredients;
         this.recipeDirection = recipeDirection;
     }
 
+    Uri getImage() {
+        return image;
+    }
 
+    ArrayList<String> getIngredient() {return ingeredients_list;}
+
+    String getDirection() {
+        return recipeDirection;
+    }
 
 }

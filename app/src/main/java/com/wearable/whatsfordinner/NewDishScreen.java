@@ -23,7 +23,6 @@ import java.util.HashMap;
 
 public class NewDishScreen extends AppCompatActivity {
 
-    ArrayList<String> ingredient_list = new ArrayList<>();
 
     Uri imgURI = Uri.parse("android.resource://com.wearable.whatsfordinner/drawable/burger");
 
@@ -47,6 +46,8 @@ public class NewDishScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_dish_screen);
+
+        final ArrayList<String> ingredient_list = new ArrayList<>();
 
         //find the views that were identified by these IDs
         recipename = (EditText) findViewById(R.id.recipe_name);
