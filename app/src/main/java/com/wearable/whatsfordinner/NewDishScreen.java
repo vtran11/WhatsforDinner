@@ -102,6 +102,18 @@ public class NewDishScreen extends AppCompatActivity {
         //set onclick listener for new dish pic button
         newpicButton = (ImageButton) findViewById(R.id.add_newdish_pic);
 
+        //Display Alert msg if Recipe name is not entered
+        recipename.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+                String recipe = recipename.getText().toString();
+
+                if (recipe.isEmpty()) {
+                    Toast.makeText(getBaseContext(), "You must add a Recipe Name!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
         //set click listener for save recipe button
         Button save_button = (Button) findViewById(R.id.save_dish_button);
         save_button.setOnClickListener(new View.OnClickListener() {
