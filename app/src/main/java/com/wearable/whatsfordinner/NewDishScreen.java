@@ -47,25 +47,24 @@ public class NewDishScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_dish_screen);
 
-        final ArrayList<String> ingredient_list = new ArrayList<>();
+         ArrayList<String> ingredientsPullDown = new ArrayList<>();
 
         //find the views that were identified by these IDs
         recipename = (EditText) findViewById(R.id.recipe_name);
         defaultPic = (ImageView) findViewById(R.id.burger);
         recipe_detail = (EditText) findViewById(R.id.recipe_detail);
 
-        //checking all saving ingredients in recipes to add new ingredients without duplicated
-        for (Map.Entry<String, CompletedRecipe> entry: Recipes.allRecipes.entrySet())
+        //************************ This is for HINT PULL DOWN in ingredient *********************************
+        for (String ingredient: Recipes.allRecipes.keySet())
         {
-            for (String i : entry.getValue().ingeredients_list)
+            for (String i : Recipes.allRecipes.get(ingredient).getIngredient().keySet())
             {
-                if (!ingredient_list.contains(i)) {
-                    ingredient_list.add(i);}
+                if (i == null | i.length() ==0) {continue;}
+                else if (!ingredientsPullDown.contains(i))
+                ingredientsPullDown.add(i);
             }
         }
 
-        //set adapter for ingredients pull-down menu so users can choose easily
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, ingredient_list);
         ingredient1 = (AutoCompleteTextView) findViewById(R.id.ingredient1);
         ingredient2 = (AutoCompleteTextView) findViewById(R.id.ingredient2);
         ingredient3 = (AutoCompleteTextView) findViewById(R.id.ingredient3);
@@ -76,6 +75,10 @@ public class NewDishScreen extends AppCompatActivity {
         ingredient8 = (AutoCompleteTextView) findViewById(R.id.ingredient8);
         ingredient9 = (AutoCompleteTextView) findViewById(R.id.ingredient9);
         ingredient10 = (AutoCompleteTextView) findViewById(R.id.ingredient10);
+
+        //set adapter for ingredients pull-down menu so users can choose easily
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, ingredientsPullDown);
+
         ingredient1.setAdapter(adapter);
         ingredient2.setAdapter(adapter);
         ingredient3.setAdapter(adapter);
@@ -109,7 +112,7 @@ public class NewDishScreen extends AppCompatActivity {
                 String recipe = recipename.getText().toString();
 
                 if (recipe.isEmpty()) {
-                    Toast.makeText(getBaseContext(), "You must add a Recipe Name!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "You must add a Recipe Name FIRST!", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -133,23 +136,51 @@ public class NewDishScreen extends AppCompatActivity {
                 }
 
                 else {
-                    ingredient_list.add(ingredient1.getText().toString());
-                    ingredient_list.add(ingredient2.getText().toString());
-                    ingredient_list.add(ingredient3.getText().toString());
-                    ingredient_list.add(ingredient4.getText().toString());
-                    ingredient_list.add(ingredient5.getText().toString());
-                    ingredient_list.add(ingredient6.getText().toString());
-                    ingredient_list.add(ingredient7.getText().toString());
-                    ingredient_list.add(ingredient8.getText().toString());
-                    ingredient_list.add(ingredient9.getText().toString());
-                    ingredient_list.add(ingredient10.getText().toString());
+                    final ArrayList<String> ingredient_list = new ArrayList<>();
+                    if(ingredient1.length() != 0 | ingredient1 != null)
+                        {ingredient_list.add(ingredient1.getText().toString().toLowerCase());}
+
+                    if(ingredient2.length() != 0 |ingredient2 != null)
+                        ingredient_list.add(ingredient2.getText().toString().toLowerCase());
+
+                    if(ingredient3.length() != 0 |ingredient3 != null)
+                        ingredient_list.add(ingredient3.getText().toString().toLowerCase());
+
+                    if(ingredient4.length() != 0 |ingredient4 != null)
+                        ingredient_list.add(ingredient4.getText().toString().toLowerCase());
+
+                    if(ingredient5.length() != 0 |ingredient5 != null)
+                        ingredient_list.add(ingredient5.getText().toString().toLowerCase());
+
+                    if(ingredient6.length() != 0 |ingredient6 != null)
+                        ingredient_list.add(ingredient6.getText().toString().toLowerCase());
+
+                    if(ingredient7.length() != 0 |ingredient7 != null)
+                        ingredient_list.add(ingredient7.getText().toString().toLowerCase());
+
+                    if(ingredient8.length() != 0 |ingredient8 != null)
+                        ingredient_list.add(ingredient8.getText().toString().toLowerCase());
+
+                    if(ingredient9.length() != 0 |ingredient9 != null)
+                        ingredient_list.add(ingredient9.getText().toString().toLowerCase());
+
+                    if(ingredient10.length() != 0 |ingredient10 != null)
+                        ingredient_list.add(ingredient10.getText().toString().toLowerCase());
+
+
+                    Map<String, Integer> ingredientsCount = new HashMap<String, Integer>();
+                    for (String ingres: ingredient_list)
+                    {
+                        Integer count = ingredientsCount.get(ingres);
+                        ingredientsCount.put(ingres, count == null ? 1 : count +1);
+                    }
 
                     String recipeDirection = recipe_detail.getText().toString();
 
                     //Limit the length of cooking direction to 250 characters
                     if (recipeDirection.length() <= 250) {
                         //add recipe name, image, ingredients and direction to a completed recipe
-                        CompletedRecipe recipe = new CompletedRecipe(recipeUpperKey, imgURI, ingredient_list, recipeDirection);
+                        CompletedRecipe recipe = new CompletedRecipe(recipeUpperKey, imgURI, ingredientsCount, recipeDirection);
                         Recipes.allRecipes.put(recipeUpperKey, recipe);
 
                         Toast.makeText(getBaseContext(), "Recipe successfully saved!!!", Toast.LENGTH_LONG).show();

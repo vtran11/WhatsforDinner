@@ -59,18 +59,29 @@ public class LandscapeFragment extends Fragment {
                 CompletedRecipe recipe = Recipes.allRecipes.get(selectedRecipe);
 
 
-                //******  Set Image for current Selected Recipe  *********
+                //******  Set Image for current Selected Recipe  ********* DONE with default image
                 image = (ImageView) landscapeView.findViewById(R.id.recipe_pic) ;
                 image.setImageURI(recipe.getImage());
 
+
+
                 //******  Set Ingredients for current Selected Recipe  *********
                 ingredients_list = (TextView) landscapeView.findViewById(R.id.ingredient_list);
-                //recipe.getIngredient()
+                    for (String ing: Recipes.allRecipes.get(selectedRecipe).getIngredient().keySet())
+                    {
+                        if (ing == null | ing.length() ==0) {continue;}
+
+                        ingredients_list.append(ing + " ( " + Recipes.allRecipes.get(selectedRecipe).getIngredient().get(ing) + " )");
+                        ingredients_list.append("\n");
+                    }
+
+
+                /*//recipe.getIngredient()
                 for(int i=0; i < recipe.getIngredient().size(); i++){
                     ingredients_list.append(recipe.getIngredient().get(i));
                     ingredients_list.append("\n");
                 }
-
+                */
 
                 //******  Set Direction for current Selected Recipe  ********* DONE
                 direction_list = (TextView) landscapeView.findViewById(R.id.recipe_direction);

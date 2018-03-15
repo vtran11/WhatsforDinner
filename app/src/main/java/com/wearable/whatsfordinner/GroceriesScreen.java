@@ -8,12 +8,14 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.HashMap;
+
 
 public class GroceriesScreen extends AppCompatActivity {
     ListView ingredients_listView;
 
     String recipesname;
-    ArrayList<String> ingredients_list = new ArrayList<>();
+    ArrayList<String> ingredientsWithUnit = new ArrayList<>();
     ArrayList<String> recipes = new ArrayList<>();
 
     //Uri image;
@@ -38,15 +40,24 @@ public class GroceriesScreen extends AppCompatActivity {
             }
         }*/
 
-       for(String text: recipes) {
+       /*for(String text: recipes) {
            for (int i = 0; i < Recipes.allRecipes.get(text).getIngredient().size(); i++) {
                ingredients_list.add(Recipes.allRecipes.get(text).getIngredient().get(i));
            }
        }
+        */
 
+        for (String ingredients: Recipes.allRecipes.keySet()) {
+            for (String ing: Recipes.allRecipes.get(ingredients).getIngredient().keySet())
+            {
+                if (ing == null | ing.length() ==0) {continue;}
+
+                ingredientsWithUnit.add(ing + " ( " + Recipes.allRecipes.get(ingredients).getIngredient().get(ing) + " )");
+            }
+        }
 
         //display the ingredient list on screen
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, ingredients_list);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, ingredientsWithUnit);
         ingredients_listView = (ListView) findViewById(R.id.IngredientListView);
         ingredients_listView.setAdapter(adapter);
 

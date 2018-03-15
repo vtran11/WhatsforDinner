@@ -9,6 +9,8 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
+
 import android.net.Uri;
 
 import android.content.Context;
@@ -19,10 +21,10 @@ import android.content.Context;
 public class CompletedRecipe implements Serializable {
     public String recipeName;
     public Uri image;
-    public ArrayList<String> ingeredients_list;
+    public Map<String, Integer> ingeredients_list;
     public String recipeDirection;
 
-    public CompletedRecipe(String recipeName, Uri image, ArrayList<String> ingredients, String recipeDirection)
+    public CompletedRecipe(String recipeName, Uri image, Map<String, Integer> ingredients, String recipeDirection)
     {
         this.recipeName = recipeName;
         this.image = image;
@@ -34,7 +36,7 @@ public class CompletedRecipe implements Serializable {
         return image;
     }
 
-    ArrayList<String> getIngredient() {return ingeredients_list;}
+    Map<String, Integer> getIngredient() {return ingeredients_list;}
 
     String getDirection() {
         return recipeDirection;
