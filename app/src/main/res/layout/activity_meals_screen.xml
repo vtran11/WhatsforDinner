@@ -29,7 +29,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#c5e3ed"
-                    android:gravity="center"
                     android:text="Planner"
                     android:textAppearance="@android:style/TextAppearance.Widget.PopupMenu.Large" />
             </TableRow>
@@ -194,7 +193,7 @@
                     android:text="Lunch"
                     android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
                 <Spinner
-                    android:id="@+id/lunch12pinner"
+                    android:id="@+id/lunch2Spinner"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"

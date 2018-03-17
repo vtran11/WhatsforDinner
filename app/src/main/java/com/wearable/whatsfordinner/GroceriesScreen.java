@@ -51,7 +51,6 @@ public class GroceriesScreen extends AppCompatActivity {
             for (String ing: Recipes.allRecipes.get(ingredients).getIngredient().keySet())
             {
                 if (ing == null | ing.length() ==0) {continue;}
-
                 ingredientsWithUnit.add(ing + " ( " + Recipes.allRecipes.get(ingredients).getIngredient().get(ing) + " )");
             }
         }

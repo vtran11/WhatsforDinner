@@ -14,3 +14,4 @@ public class Recipes {
     //Use to save selected recipes for meal planning
     public static ArrayList<String> allSelectedRecipes = new ArrayList<>();
 }
+

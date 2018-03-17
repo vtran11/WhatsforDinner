@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -59,7 +60,7 @@ public class LandscapeFragment extends Fragment {
                 CompletedRecipe recipe = Recipes.allRecipes.get(selectedRecipe);
 
 
-                //******  Set Image for current Selected Recipe  ********* DONE with default image
+                //******  Set Image for current Selected Recipe  ********* DONE with default imagdd
                 image = (ImageView) landscapeView.findViewById(R.id.recipe_pic) ;
                 image.setImageURI(recipe.getImage());
 
@@ -67,21 +68,28 @@ public class LandscapeFragment extends Fragment {
 
                 //******  Set Ingredients for current Selected Recipe  *********
                 ingredients_list = (TextView) landscapeView.findViewById(R.id.ingredient_list);
-                    for (String ing: Recipes.allRecipes.get(selectedRecipe).getIngredient().keySet())
+                 /*   for (String ing: Recipes.allRecipes.get(selectedRecipe).getIngredient().keySet())
                     {
                         if (ing == null | ing.length() ==0) {continue;}
 
-                        ingredients_list.append(ing + " ( " + Recipes.allRecipes.get(selectedRecipe).getIngredient().get(ing) + " )");
+                        ingredients_list.add(ing + " ( " + Recipes.allRecipes.get(selectedRecipe).getIngredient().get(ing) + " )");
                         ingredients_list.append("\n");
-                    }
+                    }*/
+                ArrayList<String> ingredients = new ArrayList<>();
+                for (String ing: Recipes.allRecipes.get(selectedRecipe).getIngredient().keySet())
+                {
+                    if (ing == null | ing.length() ==0) {continue;}
 
+                    ingredients.add(ing + " ( " + Recipes.allRecipes.get(selectedRecipe).getIngredient().get(ing) + " )");
 
-                /*//recipe.getIngredient()
-                for(int i=0; i < recipe.getIngredient().size(); i++){
-                    ingredients_list.append(recipe.getIngredient().get(i));
-                    ingredients_list.append("\n");
                 }
-                */
+
+                for (int i =0; i< ingredients.size(); i++)
+                {
+                    ingredients_list.setText(ingredients.get(i) + "\n");
+
+                }
+
 
                 //******  Set Direction for current Selected Recipe  ********* DONE
                 direction_list = (TextView) landscapeView.findViewById(R.id.recipe_direction);
