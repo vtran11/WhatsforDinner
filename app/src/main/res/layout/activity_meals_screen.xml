@@ -692,7 +692,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginBottom="100dp"
+                android:layout_marginBottom="70dp"
                 android:layout_weight="1">
                 <TextView
                     android:id="@+id/dinner7"
@@ -709,6 +709,32 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:textAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+            </TableRow>
+
+
+            <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="110dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/weekly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Weekly:"/>
+
+                <Button
+                    android:id="@+id/nutritionGoalButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Nutrition Goals"/>
+
             </TableRow>
 
 

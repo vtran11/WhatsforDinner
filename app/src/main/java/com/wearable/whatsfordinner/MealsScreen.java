@@ -1,11 +1,14 @@
 package com.wearable.whatsfordinner;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -473,6 +476,19 @@ public class MealsScreen extends AppCompatActivity {
         });
         adapterSunday.notifyDataSetChanged();
 
+
+
+
+        //****************** Nutrition Goal Activity *************************
+        //Set up click listener for new dish button
+        Button nutritionGoal = (Button) findViewById(R.id.nutritionGoalButton);
+        nutritionGoal.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MealsScreen.this, NutritionGoalScreen.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

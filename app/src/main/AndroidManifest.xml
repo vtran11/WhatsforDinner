@@ -21,7 +21,11 @@
         <activity android:name=".NewDishActivity" />
         <activity android:name=".RecipesScreen" />
         <activity android:name=".GroceriesScreen" />
-        <activity android:name=".NewDishScreen"></activity>
+        <activity android:name=".NewDishScreen" />
+        <activity
+            android:name=".NutritionGoalScreen"
+            android:label="@string/title_activity_nutrition_goal_screen"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
