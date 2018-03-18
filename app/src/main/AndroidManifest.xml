@@ -25,7 +25,8 @@
         <activity
             android:name=".NutritionGoalScreen"
             android:label="@string/title_activity_nutrition_goal_screen"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".EditedDishScreen" />
     </application>
 
 </manifest>

@@ -16,12 +16,12 @@
         android:background="#c5e3ed" />
 
 
-        <ListView
-            android:id="@+id/IngredientListView"
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:background="#eef7fa">
-        </ListView>
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/IngredientListView"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="#eef7fa"/>
 
 
 </LinearLayout>

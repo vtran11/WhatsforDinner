@@ -55,14 +55,12 @@
                 android:inputType="textMultiLine|textCapWords|textAutoComplete"
                 android:textAppearance="@android:style/TextAppearance.Widget.PopupMenu.Large" />
 
-
             <AutoCompleteTextView
                 android:id="@+id/ingredient1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine|textCapWords|textAutoComplete"
-                android:hint="@string/Ingredient1"/>
-
+                android:hint="@string/Ingredient1" />
 
             <AutoCompleteTextView
                 android:id="@+id/ingredient2"

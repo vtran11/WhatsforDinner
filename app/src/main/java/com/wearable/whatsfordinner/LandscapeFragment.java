@@ -1,6 +1,7 @@
 package com.wearable.whatsfordinner;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -25,7 +26,6 @@ import java.util.Set;
 public class LandscapeFragment extends Fragment {
     ListView recipesListView;
     TextView recipe_name;
-    TextView ingredients_list;
     TextView direction_list;
     ImageView image;
 
@@ -67,27 +67,15 @@ public class LandscapeFragment extends Fragment {
 
 
                 //******  Set Ingredients for current Selected Recipe  *********
-                ingredients_list = (TextView) landscapeView.findViewById(R.id.ingredient_list);
-                 /*   for (String ing: Recipes.allRecipes.get(selectedRecipe).getIngredient().keySet())
-                    {
-                        if (ing == null | ing.length() ==0) {continue;}
+                TextView ingredients_list = (TextView) landscapeView.findViewById(R.id.ingredient_list);
+                ingredients_list.setText("");
 
-                        ingredients_list.add(ing + " ( " + Recipes.allRecipes.get(selectedRecipe).getIngredient().get(ing) + " )");
-                        ingredients_list.append("\n");
-                    }*/
-                ArrayList<String> ingredients = new ArrayList<>();
                 for (String ing: Recipes.allRecipes.get(selectedRecipe).getIngredient().keySet())
                 {
                     if (ing == null | ing.length() ==0) {continue;}
 
-                    ingredients.add(ing + " ( " + Recipes.allRecipes.get(selectedRecipe).getIngredient().get(ing) + " )");
-
-                }
-
-                for (int i =0; i< ingredients.size(); i++)
-                {
-                    ingredients_list.setText(ingredients.get(i) + "\n");
-
+                    ingredients_list.append(ing + " ( " + Recipes.allRecipes.get(selectedRecipe).getIngredient().get(ing) + " " + Recipes.IngredientwithAmount.get(ing) + " )");
+                    ingredients_list.append("\n");
                 }
 
 
@@ -98,6 +86,37 @@ public class LandscapeFragment extends Fragment {
             }
         });
 
+        //******* Long Presses recipe Item for editing *******
+        recipesListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long id) {
+                String selectedRecipe = (String) adapterView.getItemAtPosition(position);
+                Intent intent = new Intent(getActivity(), EditedDishScreen.class);
+                intent.putExtra("editedRecipe", selectedRecipe);
+                intent.putExtra("editedDirection", Recipes.allRecipes.get(selectedRecipe).getDirection());
+
+               /* ArrayList<String> ing = new ArrayList<>();
+                for(String ingredient: Recipes.allRecipes.get(selectedRecipe).getIngredient().keySet()) {
+                    ing.add(ingredient);
+                }
+
+                intent.putExtra("editedIng1", ing.get(0));
+                //intent.putExtra("editedIng2", ing.get(1));
+                //intent.putExtra("editedIng3", ing.get(2));
+                //intent.putExtra("editedIng4", ing.get(3));
+                //intent.putExtra("editedIng5", ing.get(4));
+                //intent.putExtra("editedIng6", ing.get(5));
+                //intent.putExtra("editedIng7", ing.get(6));
+                //intent.putExtra("editedIng8", ing.get(7));
+                //intent.putExtra("editedIng9", ing.get(8));
+                intent.putExtra("editedIng10", ing.get(9));*/
+
+
+                startActivity(intent);
+
+                return true;
+            }
+        });
 
         return landscapeView;
     }
