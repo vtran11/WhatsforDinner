@@ -23,13 +23,15 @@ public class CompletedRecipe implements Serializable {
     public Uri image;
     public Map<String, Integer> ingeredients_list;
     public String recipeDirection;
+    public ArrayList<String> nutrition;
 
-    public CompletedRecipe(String recipeName, Uri image, Map<String, Integer> ingredients, String recipeDirection)
+    public CompletedRecipe(String recipeName, Uri image, Map<String, Integer> ingredients, String recipeDirection, ArrayList<String> nutrition)
     {
         this.recipeName = recipeName;
         this.image = image;
         this.ingeredients_list = ingredients;
         this.recipeDirection = recipeDirection;
+        this.nutrition = nutrition;
     }
 
     Uri getImage() {
@@ -42,4 +44,6 @@ public class CompletedRecipe implements Serializable {
         return recipeDirection;
     }
 
+    ArrayList<String> getNutrition() {return nutrition;}
 }
+

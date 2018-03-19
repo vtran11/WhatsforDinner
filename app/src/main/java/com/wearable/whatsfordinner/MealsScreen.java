@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -68,7 +70,9 @@ public class MealsScreen extends AppCompatActivity {
                 String monB = spinnerB1.getSelectedItem().toString();
                 if(monB != "Eating Out") {
                     recipes1.remove((String) spinnerB1.getSelectedItem());
+                    Recipes.allPlanMeals.add(monB);
                 }
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {}
@@ -84,6 +88,8 @@ public class MealsScreen extends AppCompatActivity {
                 String monL = spinnerL1.getSelectedItem().toString();
                 if(monL != "Eating Out") {
                     recipes1.remove((String) spinnerL1.getSelectedItem());
+                    Recipes.allPlanMeals.add(monL);
+
                 }
             }
             @Override
@@ -100,6 +106,7 @@ public class MealsScreen extends AppCompatActivity {
                 String monD = spinnerD1.getSelectedItem().toString();
                 if(monD != "Eating Out") {
                     recipes1.remove((String) spinnerD1.getSelectedItem());
+                    Recipes.allPlanMeals.add(monD);
                 }
             }
             @Override
@@ -128,6 +135,8 @@ public class MealsScreen extends AppCompatActivity {
                 String tuesB = spinnerB2.getSelectedItem().toString();
                 if(tuesB != "Eating Out") {
                     recipes2.remove((String) spinnerB2.getSelectedItem());
+                    Recipes.allPlanMeals.add(tuesB);
+
                 }
             }
             @Override
@@ -144,6 +153,7 @@ public class MealsScreen extends AppCompatActivity {
                 String tuesL = spinnerL2.getSelectedItem().toString();
                 if(tuesL != "Eating Out") {
                     recipes2.remove((String) spinnerL2.getSelectedItem());
+                    Recipes.allPlanMeals.add(tuesL);
                 }
             }
             @Override
@@ -161,6 +171,8 @@ public class MealsScreen extends AppCompatActivity {
                 String tuesD = spinnerD2.getSelectedItem().toString();
                 if(tuesD != "Eating Out") {
                     recipes2.remove((String) spinnerD2.getSelectedItem());
+                    Recipes.allPlanMeals.add(tuesD);
+
                 }
             }
             @Override
@@ -190,6 +202,7 @@ public class MealsScreen extends AppCompatActivity {
                 String wedB = spinnerB3.getSelectedItem().toString();
                 if(wedB != "Eating Out") {
                     recipes3.remove((String) spinnerB3.getSelectedItem());
+                    Recipes.allPlanMeals.add(wedB);
                 }
             }
             @Override
@@ -206,6 +219,8 @@ public class MealsScreen extends AppCompatActivity {
                 String wedL = spinnerL3.getSelectedItem().toString();
                 if(wedL != "Eating Out") {
                     recipes3.remove((String) spinnerL3.getSelectedItem());
+                    Recipes.allPlanMeals.add(wedL);
+
                 }
             }
             @Override
@@ -223,6 +238,8 @@ public class MealsScreen extends AppCompatActivity {
                 String wedD = spinnerD3.getSelectedItem().toString();
                 if(wedD != "Eating Out") {
                     recipes3.remove((String) spinnerD3.getSelectedItem());
+                    Recipes.allPlanMeals.add(wedD);
+
                 }
             }
             @Override
@@ -251,6 +268,7 @@ public class MealsScreen extends AppCompatActivity {
                 String thursB = spinnerB4.getSelectedItem().toString();
                 if(thursB != "Eating Out") {
                     recipes4.remove((String) spinnerB4.getSelectedItem());
+                    Recipes.allPlanMeals.add(thursB);
                 }
             }
             @Override
@@ -267,6 +285,8 @@ public class MealsScreen extends AppCompatActivity {
                 String thursL = spinnerL4.getSelectedItem().toString();
                 if(thursL != "Eating Out") {
                     recipes4.remove((String) spinnerL4.getSelectedItem());
+                    Recipes.allPlanMeals.add(thursL);
+
                 }
             }
             @Override
@@ -283,6 +303,8 @@ public class MealsScreen extends AppCompatActivity {
                 String thursD = spinnerD4.getSelectedItem().toString();
                 if(thursD != "Eating Out") {
                     recipes4.remove((String) spinnerD4.getSelectedItem());
+                    Recipes.allPlanMeals.add(thursD);
+
                 }
             }
             @Override
@@ -312,6 +334,8 @@ public class MealsScreen extends AppCompatActivity {
                 String fridayB = spinnerB5.getSelectedItem().toString();
                 if(fridayB != "Eating Out") {
                     recipes5.remove((String) spinnerB5.getSelectedItem());
+                    Recipes.allPlanMeals.add(fridayB);
+
                 }
             }
             @Override
@@ -328,6 +352,8 @@ public class MealsScreen extends AppCompatActivity {
                 String fridayL = spinnerL5.getSelectedItem().toString();
                 if(fridayL != "Eating Out") {
                     recipes5.remove((String) spinnerL5.getSelectedItem());
+                    Recipes.allPlanMeals.add(fridayL);
+
                 }
             }
             @Override
@@ -345,6 +371,8 @@ public class MealsScreen extends AppCompatActivity {
                 String fridayD = spinnerD5.getSelectedItem().toString();
                 if(fridayD != "Eating Out") {
                     recipes5.remove((String) spinnerD5.getSelectedItem());
+                    Recipes.allPlanMeals.add(fridayD);
+
                 }
             }
             @Override
@@ -374,6 +402,8 @@ public class MealsScreen extends AppCompatActivity {
                 String saturB = spinnerB6.getSelectedItem().toString();
                 if(saturB != "Eating Out") {
                     recipes6.remove((String) spinnerB6.getSelectedItem());
+                    Recipes.allPlanMeals.add(saturB);
+
                 }
             }
             @Override
@@ -390,7 +420,9 @@ public class MealsScreen extends AppCompatActivity {
                 String saturL = spinnerL6.getSelectedItem().toString();
                 if(saturL != "Eating Out") {
                     recipes6.remove((String) spinnerL6.getSelectedItem());
+                    Recipes.allPlanMeals.add(saturL);
                 }
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {}
@@ -407,7 +439,9 @@ public class MealsScreen extends AppCompatActivity {
                 String saturD = spinnerD6.getSelectedItem().toString();
                 if(saturD != "Eating Out") {
                     recipes6.remove((String) spinnerD6.getSelectedItem());
+                    Recipes.allPlanMeals.add(saturD);
                 }
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {}
@@ -436,7 +470,10 @@ public class MealsScreen extends AppCompatActivity {
                 String sunB = spinnerB7.getSelectedItem().toString();
                 if(sunB != "Eating Out") {
                     recipes7.remove((String) spinnerB7.getSelectedItem());
+                    Recipes.allPlanMeals.add(sunB);
+
                 }
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {}
@@ -452,7 +489,10 @@ public class MealsScreen extends AppCompatActivity {
                 String sunL = spinnerL7.getSelectedItem().toString();
                 if(sunL != "Eating Out") {
                     recipes7.remove((String) spinnerL7.getSelectedItem());
+                    Recipes.allPlanMeals.add(sunL);
+
                 }
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {}
@@ -469,6 +509,8 @@ public class MealsScreen extends AppCompatActivity {
                 String sunD = spinnerD7.getSelectedItem().toString();
                 if(sunD != "Eating Out") {
                     recipes7.remove((String) spinnerD7.getSelectedItem());
+                    Recipes.allPlanMeals.add(sunD);
+
                 }
             }
             @Override
@@ -477,6 +519,89 @@ public class MealsScreen extends AppCompatActivity {
         adapterSunday.notifyDataSetChanged();
 
 
+
+        //************************ Planned nutrition Calculation ****************************
+        //****** Set Calculation Button listener *********
+        Button caloButton = (Button) findViewById(R.id.caloCal);
+        Button carbonButton = (Button) findViewById(R.id.carbonCal);
+        Button mineralButton = (Button) findViewById(R.id.mineralCal);
+        Button vitaminButton = (Button) findViewById(R.id.vitaminCal);
+        Button sugarButton = (Button) findViewById(R.id.sugarCal);
+
+        final EditText caloPlan = (EditText) findViewById(R.id.caloplan);
+        final EditText carbonPlan = (EditText) findViewById(R.id.carbonplan);
+        final EditText mineralPlan = (EditText) findViewById(R.id.mineralplan);
+        final EditText vitaminPlan = (EditText) findViewById(R.id.vitaminplan);
+        final EditText sugarPlan = (EditText) findViewById(R.id.sugarplan);
+
+        //Planned Weekly Calories - Calculation
+        caloButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int sum = 0;
+                for(String recipe: Recipes.allPlanMeals) {
+                    sum += Integer.parseInt(Recipes.allRecipes.get(recipe).getNutrition().get(0));
+                }
+
+                caloPlan.setText(Integer.toString(sum));
+            }
+        });
+
+
+        //Planned Weekly Carbons - Calculation
+        carbonButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int sum = 0;
+                for(String recipe: Recipes.allPlanMeals) {
+                    sum += Integer.parseInt(Recipes.allRecipes.get(recipe).getNutrition().get(1));
+                }
+
+                carbonPlan.setText(Integer.toString(sum));
+             }
+        });
+
+
+        //Planned Weekly Minerals - Calculation
+        mineralButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int sum = 0;
+                for(String recipe: Recipes.allPlanMeals) {
+                    sum += Integer.parseInt(Recipes.allRecipes.get(recipe).getNutrition().get(2));
+                }
+
+                mineralPlan.setText(Integer.toString(sum));
+             }
+        });
+
+
+        //Planned Weekly Vitamins - Calculation
+        vitaminButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int sum = 0;
+                for(String recipe: Recipes.allPlanMeals) {
+                    sum += Integer.parseInt(Recipes.allRecipes.get(recipe).getNutrition().get(3));
+                }
+
+                vitaminPlan.setText(Integer.toString(sum));
+             }
+        });
+
+
+        //Planned Weekly Sugar - Calculation
+        sugarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int sum = 0;
+                for(String recipe: Recipes.allPlanMeals) {
+                    sum += Integer.parseInt(Recipes.allRecipes.get(recipe).getNutrition().get(4));
+                }
+
+                sugarPlan.setText(Integer.toString(sum));
+             }
+        });
 
 
         //****************** Nutrition Goal Activity *************************

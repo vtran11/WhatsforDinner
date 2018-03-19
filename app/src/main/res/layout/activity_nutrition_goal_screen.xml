@@ -7,7 +7,6 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="40dp"
-        android:layout_marginTop="10dp"
         android:background="#c5e3ed"
         android:gravity="center"
         android:text="Weekly Nutrition Goal"
@@ -16,7 +15,6 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:background="#e6f3f7"
         android:orientation="horizontal">
 
@@ -37,7 +35,6 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:background="#eef7fa"
         android:orientation="horizontal">
 
@@ -58,7 +55,6 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:background="#e6f3f7"
         android:orientation="horizontal">
 
@@ -79,7 +75,6 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:background="#eef7fa"
         android:orientation="horizontal">
 
@@ -100,7 +95,6 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:background="#e6f3f7"
         android:orientation="horizontal">
 
@@ -118,22 +112,25 @@
     </LinearLayout>
 
 
+
+
+
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:background="#eef7fa"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/calculation"
+            android:id="@+id/caloCal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total Goal Calculation:"
+            android:text="Planned Calories:"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         <EditText
-            android:id="@+id/totalGoalCal"
+            android:id="@+id/caloplan"
             android:layout_width="100dp"
             android:layout_height="wrap_content"/>
 
@@ -142,6 +139,104 @@
             android:layout_height="wrap_content"
             android:text="grams"/>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#eef7fa"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/carbonCal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Planned Carbonhydrates:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <EditText
+            android:id="@+id/carbonplan"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="grams"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#eef7fa"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/mineralCal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Planned minerals:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <EditText
+            android:id="@+id/mineralplan"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="grams"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#eef7fa"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/vitaminCal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Planned Vitamins:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <EditText
+            android:id="@+id/vitaminplan"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="grams"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#eef7fa"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/sugarCal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Planned Sugar:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <EditText
+            android:id="@+id/sugarplan"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="grams"/>
+    </LinearLayout>
+
 
 
 </LinearLayout>

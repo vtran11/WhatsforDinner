@@ -137,6 +137,51 @@
                 android:inputType="textMultiLine|textCapWords|textAutoComplete"
                 android:hint="@string/recipe_detail"/>
 
+
+
+
+
+
+            <EditText
+                android:id="@+id/nutrition1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Nutrition for calories(grams)"/>
+
+            <EditText
+                android:id="@+id/nutrition2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Nutrition for carbohydrates(grams)"/>
+
+            <EditText
+                android:id="@+id/nutrition3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Nutrition for minerals(grams)"/>
+
+            <EditText
+                android:id="@+id/nutrition4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Nutrition for vitamins(grams)"/>
+
+            <EditText
+                android:id="@+id/nutrition5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:hint="Nutrition for sugar(grams)"/>
+
+
+
+
+
             <Button
                 android:id="@+id/save_dish_button"
                 android:layout_width="wrap_content"

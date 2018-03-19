@@ -19,5 +19,7 @@ public class Recipes {
     public static Map<String, Integer> IngredientwithUnit = new HashMap<>();
     public static Map<String, String> IngredientwithAmount = new HashMap<>();
 
+    public static ArrayList<String> allPlanMeals = new ArrayList<>();
+
 }
 

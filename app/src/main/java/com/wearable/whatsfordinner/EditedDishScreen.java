@@ -31,6 +31,12 @@ public class EditedDishScreen extends AppCompatActivity {
     ImageButton newpicButton;
     EditText recipe_detail;
 
+    EditText calo;
+    EditText carbon;
+    EditText mineral;
+    EditText vitamin;
+    EditText sugar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,6 +93,13 @@ public class EditedDishScreen extends AppCompatActivity {
         if(ingre.get(9) != null)
             ingredient10.setText(ingre.get(9));
 
+
+
+        calo = (EditText) findViewById(R.id.nutrition1);
+        carbon = (EditText) findViewById(R.id.nutrition2);
+        mineral = (EditText) findViewById(R.id.nutrition3);
+        vitamin = (EditText) findViewById(R.id.nutrition4);
+        sugar = (EditText) findViewById(R.id.nutrition5);
 
 
         //set onclick listener for new dish pic button
@@ -194,12 +207,21 @@ public class EditedDishScreen extends AppCompatActivity {
                     }
 
 
+
+                    ArrayList<String> recipeNutrition = new ArrayList<>();
+                    recipeNutrition.add(calo.getText().toString());
+                    recipeNutrition.add(carbon.getText().toString());
+                    recipeNutrition.add(mineral.getText().toString());
+                    recipeNutrition.add(vitamin.getText().toString());
+                    recipeNutrition.add(sugar.getText().toString());
+
+
                     String recipeDirection = recipe_detail.getText().toString();
 
                     //Limit the length of cooking direction to 250 characters
                     if (recipeDirection.length() <= 250) {
                         //add recipe name, image, ingredients and direction to a completed recipe
-                        CompletedRecipe recipe = new CompletedRecipe(recipeUpperKey, imgURI, ingredientsCount, recipeDirection);
+                        CompletedRecipe recipe = new CompletedRecipe(recipeUpperKey, imgURI, ingredientsCount, recipeDirection, recipeNutrition);
                         Recipes.allRecipes.put(recipeUpperKey, recipe);
 
                         Toast.makeText(getBaseContext(), "Recipe successfully saved!!!", Toast.LENGTH_LONG).show();

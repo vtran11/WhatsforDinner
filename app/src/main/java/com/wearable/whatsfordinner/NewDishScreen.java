@@ -42,6 +42,12 @@ public class NewDishScreen extends AppCompatActivity {
     ImageButton newpicButton;
     EditText recipe_detail;
 
+    EditText calo;
+    EditText carbon;
+    EditText mineral;
+    EditText vitamin;
+    EditText sugar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -104,6 +110,14 @@ public class NewDishScreen extends AppCompatActivity {
 
         //set onclick listener for new dish pic button
         newpicButton = (ImageButton) findViewById(R.id.add_newdish_pic);
+
+
+        calo = (EditText) findViewById(R.id.nutrition1);
+        carbon = (EditText) findViewById(R.id.nutrition2);
+        mineral = (EditText) findViewById(R.id.nutrition3);
+        vitamin = (EditText) findViewById(R.id.nutrition4);
+        sugar = (EditText) findViewById(R.id.nutrition5);
+
 
         //Display Alert msg if Recipe name already exists
         recipename.setOnFocusChangeListener(new View.OnFocusChangeListener() {
@@ -220,10 +234,19 @@ public class NewDishScreen extends AppCompatActivity {
 
                     String recipeDirection = recipe_detail.getText().toString();
 
+
+                    ArrayList<String> recipeNutrition = new ArrayList<>();
+                    recipeNutrition.add(calo.getText().toString());
+                    recipeNutrition.add(carbon.getText().toString());
+                    recipeNutrition.add(mineral.getText().toString());
+                    recipeNutrition.add(vitamin.getText().toString());
+                    recipeNutrition.add(sugar.getText().toString());
+
+
                     //Limit the length of cooking direction to 250 characters
                     if (recipeDirection.length() <= 250) {
                         //add recipe name, image, ingredients and direction to a completed recipe
-                        CompletedRecipe recipe = new CompletedRecipe(recipeUpperKey, imgURI, ingredientsCount, recipeDirection);
+                        CompletedRecipe recipe = new CompletedRecipe(recipeUpperKey, imgURI, ingredientsCount, recipeDirection, recipeNutrition);
                         Recipes.allRecipes.put(recipeUpperKey, recipe);
 
                         Toast.makeText(getBaseContext(), "Recipe successfully saved!!!", Toast.LENGTH_LONG).show();

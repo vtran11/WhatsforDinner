@@ -712,6 +712,109 @@
             </TableRow>
 
 
+
+
+
+
+
+
+
+            <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/caloCal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Planned Calories(g):"/>
+
+                <EditText
+                    android:id="@+id/caloplan"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"/>
+            </TableRow>
+
+            <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1">
+                <Button
+                    android:id="@+id/carbonCal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Planned Carbonhydrates(g):" />
+
+                <EditText
+                    android:id="@+id/carbonplan"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"/>
+            </TableRow>
+
+
+            <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1">
+                <Button
+                    android:id="@+id/mineralCal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Planned minerals(g):" />
+
+                <EditText
+                    android:id="@+id/mineralplan"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"/>
+            </TableRow>
+
+
+            <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1">
+                <Button
+                    android:id="@+id/vitaminCal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Planned Vitamins(g):" />
+
+                <EditText
+                    android:id="@+id/vitaminplan"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"/>
+            </TableRow>
+
+            <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="40dp"
+                android:layout_weight="1">
+                <Button
+                    android:id="@+id/sugarCal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Planned Sugar(g):"/>
+
+                <EditText
+                    android:id="@+id/sugarplan"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"/>
+            </TableRow>
+
+
+
+
+
+
+
             <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -736,7 +839,6 @@
                     android:text="Nutrition Goals"/>
 
             </TableRow>
-
 
         </TableLayout>
 
