@@ -55,70 +55,70 @@
                 android:inputType="textMultiLine|textCapWords|textAutoComplete"
                 android:textAppearance="@android:style/TextAppearance.Widget.PopupMenu.Large" />
 
-            <AutoCompleteTextView
+            <EditText
                 android:id="@+id/ingredient1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine|textCapWords|textAutoComplete"
                 android:hint="@string/Ingredient1" />
 
-            <AutoCompleteTextView
+            <EditText
                 android:id="@+id/ingredient2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textCapCharacters"
                 android:hint="@string/Ingredient2"/>
 
-            <AutoCompleteTextView
+            <EditText
                 android:id="@+id/ingredient3"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine|textCapWords|textAutoComplete"
                 android:hint="@string/Ingredient3"/>
 
-            <AutoCompleteTextView
+            <EditText
                 android:id="@+id/ingredient4"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine|textCapWords|textAutoComplete"
                 android:hint="@string/Ingredient4"/>
 
-            <AutoCompleteTextView
+            <EditText
                 android:id="@+id/ingredient5"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine|textCapWords|textAutoComplete"
                 android:hint="@string/Ingredient5"/>
 
-            <AutoCompleteTextView
+            <EditText
                 android:id="@+id/ingredient6"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine|textCapWords|textAutoComplete"
                 android:hint="@string/Ingredient6"/>
 
-            <AutoCompleteTextView
+            <EditText
                 android:id="@+id/ingredient7"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine|textCapWords|textAutoComplete"
                 android:hint="@string/Ingredient7"/>
 
-            <AutoCompleteTextView
+            <EditText
                 android:id="@+id/ingredient8"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine|textCapWords|textAutoComplete"
                 android:hint="@string/Ingredient8"/>
 
-            <AutoCompleteTextView
+            <EditText
                 android:id="@+id/ingredient9"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine|textCapWords|textAutoComplete"
                 android:hint="@string/Ingredient9"/>
 
-            <AutoCompleteTextView
+            <EditText
                 android:id="@+id/ingredient10"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"

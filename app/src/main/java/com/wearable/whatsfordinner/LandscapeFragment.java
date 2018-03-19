@@ -95,22 +95,16 @@ public class LandscapeFragment extends Fragment {
                 intent.putExtra("editedRecipe", selectedRecipe);
                 intent.putExtra("editedDirection", Recipes.allRecipes.get(selectedRecipe).getDirection());
 
-               /* ArrayList<String> ing = new ArrayList<>();
-                for(String ingredient: Recipes.allRecipes.get(selectedRecipe).getIngredient().keySet()) {
-                    ing.add(ingredient);
+                ArrayList<String> ing = new ArrayList<>();
+                for(String i: Recipes.allRecipes.get(selectedRecipe).getIngredient().keySet())
+                { ing.add(i);}
+
+                for(int i = ing.size(); i <= 10; i++)
+                {
+                    ing.add("");
                 }
 
-                intent.putExtra("editedIng1", ing.get(0));
-                //intent.putExtra("editedIng2", ing.get(1));
-                //intent.putExtra("editedIng3", ing.get(2));
-                //intent.putExtra("editedIng4", ing.get(3));
-                //intent.putExtra("editedIng5", ing.get(4));
-                //intent.putExtra("editedIng6", ing.get(5));
-                //intent.putExtra("editedIng7", ing.get(6));
-                //intent.putExtra("editedIng8", ing.get(7));
-                //intent.putExtra("editedIng9", ing.get(8));
-                intent.putExtra("editedIng10", ing.get(9));*/
-
+                intent.putStringArrayListExtra("editedIngedients", ing);
 
                 startActivity(intent);
 

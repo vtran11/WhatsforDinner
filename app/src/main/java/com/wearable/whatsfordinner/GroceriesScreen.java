@@ -9,6 +9,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.widget.TextView;
+import android.graphics.Paint;
 
 
 import java.util.ArrayList;
@@ -28,9 +30,7 @@ public class GroceriesScreen extends AppCompatActivity {
     SwipeMenuListView ingredients_listView;
 
     String recipesname;
-    ArrayList<String> ingredientsWithUnit = new ArrayList<>();
     ArrayList<String> recipes = new ArrayList<>();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,22 +44,8 @@ public class GroceriesScreen extends AppCompatActivity {
             recipes.add(entry.getKey());
         }
 
-        //Put all ingredients with unit into the list
-       /* for (String recipe: Recipes.allRecipes.keySet()) {
-            for (String ing: Recipes.allRecipes.get(recipe).getIngredient().keySet())
-            {
-                if (ing == null | ing.length() ==0) {continue;}
 
-                //Eliminate repeated ingredients
-                if(ingredientsWithUnit.contains(ing))
-                {
-                    Recipes.allRecipes.get(recipe).getIngredient().get(ing) ;
-                }
-
-                else
-                    ingredientsWithUnit.add(ing + " ( " + Recipes.allRecipes.get(recipe).getIngredient().get(ing) + " )");
-            }
-        }*/
+        final ArrayList<String> ingredientsWithUnit = new ArrayList<>();
 
 
             for (String ing: Recipes.IngredientwithUnit.keySet())
@@ -104,21 +90,26 @@ public class GroceriesScreen extends AppCompatActivity {
                 String selectedIngredientwithUnit = (String) adapter.getItem(position);
                 String selectedIngredient = selectedIngredientwithUnit.substring(0, selectedIngredientwithUnit.indexOf("(") - 1);
                 int newUnit;
+
+                View view;
                 switch (index){
                     case 0:
-                        //newUnit = Recipes.IngredientwithUnit.get(selectedIngredient) +1;
-                        //Recipes.IngredientwithUnit.put(selectedIngredient, newUnit);
-                        //ingredientsWithUnit.add(selectedIngredient + " ( " + (Recipes.IngredientwithUnit.get(selectedIngredient) +1) + " )");
+                        newUnit = Recipes.IngredientwithUnit.get(selectedIngredient) + 1;
+                        Recipes.IngredientwithUnit.put(selectedIngredient, newUnit);
+                        adapter.remove(adapter.getItem(position));
+                        ingredientsWithUnit.add(selectedIngredient + " ( " + Recipes.IngredientwithUnit.get(selectedIngredient) + " "+ Recipes.IngredientwithAmount.get(selectedIngredient) +" )");
+                        adapter.notifyDataSetChanged();
                         break;
-                    case 1:
-                        //Recipes.IngredientwithUnit.put(selectedIngredient, Recipes.IngredientwithUnit.get(selectedIngredient)-1);
-                        //ingredientsWithUnit.add(selectedIngredient + " ( " + (Recipes.IngredientwithUnit.get(selectedIngredient) -1) + " )");
+
+                        case 1:
+                        newUnit = Recipes.IngredientwithUnit.get(selectedIngredient) - 1;
+                        Recipes.IngredientwithUnit.put(selectedIngredient, newUnit);
+                        adapter.remove(adapter.getItem(position));
+                        ingredientsWithUnit.add(selectedIngredient + " ( " + Recipes.IngredientwithUnit.get(selectedIngredient) + " "+ Recipes.IngredientwithAmount.get(selectedIngredient) +" )");
+                        adapter.notifyDataSetChanged();
                         break;
                 }
 
-                //adapter.clear();
-                //adapter.addAll(ingredientsWithUnit);
-                //adapter.notifyDataSetChanged();
 
                 return false;
             }
